@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Gestión de Talento</title>
+
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+ 
+  <link href="css/styles.css" rel="stylesheet" />
+
+  
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <div class="container mt-4">
+    <h1 class="mb-4">Registrar Candidato</h1>
+    <ul class="nav nav-tabs mt-5" id="myTabs" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="ofertas-tab" data-bs-toggle="tab" data-bs-target="#ofertas" type="button" role="tab">Ofertas</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="ordenes-tab" data-bs-toggle="tab" data-bs-target="#ordenes" type="button" role="tab">Órdenes</button>
+        </li>
+      </ul>
+      
+      <div class="tab-content p-3 border border-top-0 rounded-bottom bg-white" id="myTabContent">
+
+        <div class="tab-pane fade show active" id="ofertas" role="tabpanel">
+          <form id="form-oferta" class="row g-3 mb-4">
+            <div class="col-md-6">
+              <input name="cliente" class="form-control" placeholder="Cliente" required>
+            </div>
+            <div class="col-md-6">
+              <input name="cargo" class="form-control" placeholder="Cargo" required>
+            </div>
+            <div class="col-12">
+              <input name="descripcion" class="form-control" placeholder="Descripción" required>
+            </div>
+            <div class="col-md-6">
+              <input name="ciudad" class="form-control" placeholder="Ciudad" required>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-success w-100">Guardar Oferta</button>
+            </div>
+          </form>
+          <table class="table table-bordered" id="tabla-ofertas">
+            <thead class="table-light">
+              <tr>
+                <th>#</th>
+                <th>Cliente</th>
+                <th>Cargo</th>
+                <th>Ciudad</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      
+   
+        <div class="tab-pane fade" id="ordenes" role="tabpanel">
+          <form id="form-orden" class="row g-3 mb-4">
+            <div class="col-md-6">
+              <input name="cliente" class="form-control" placeholder="Cliente" required>
+            </div>
+            <div class="col-md-6">
+              <input name="cargo" class="form-control" placeholder="Cargo" required>
+            </div>
+            <div class="col-12">
+              <input name="examenes" class="form-control" placeholder="Exámenes Requeridos" required>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-warning w-100">Guardar Orden</button>
+            </div>
+          </form>
+          <table class="table table-bordered" id="tabla-ordenes">
+            <thead class="table-light">
+              <tr>
+                <th>#</th>
+                <th>Cliente</th>
+                <th>Cargo</th>
+                <th>Exámenes</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+      
+    <form id="form-candidato" class="row g-3">
+      <div class="col-md-6">
+        <input type="text" name="nombre" class="form-control" placeholder="Nombre" required>
+      </div>
+      <div class="col-md-6">
+        <input type="text" name="apellido" class="form-control" placeholder="Apellido" required>
+      </div>
+      <div class="col-md-4">
+        <input type="text" name="tipo_documento" class="form-control" placeholder="Tipo Documento" required>
+      </div>
+      <div class="col-md-4">
+        <input type="text" name="cedula" class="form-control" placeholder="Cédula" required>
+      </div>
+      <div class="col-md-4">
+        <input type="date" name="fecha_nacimiento" class="form-control">
+      </div>
+      <div class="col-md-2">
+        <input type="text" name="rh" class="form-control" placeholder="RH" required>
+      </div>
+      <div class="col-md-3">
+        <input type="text" name="ciudad_expedicion" class="form-control" placeholder="Ciudad Expedición">
+      </div>
+      <div class="col-md-3">
+        <input type="text" name="ciudad_nacimiento" class="form-control" placeholder="Ciudad Nacimiento">
+      </div>
+      <div class="col-md-4">
+        <input type="text" name="ciudad_domicilio" class="form-control" placeholder="Ciudad Domicilio">
+      </div>
+      <div class="col-12">
+        <button type="submit" class="btn btn-primary w-100">Guardar Candidato</button>
+      </div>
+    </form>
+
+    <hr class="my-5">
+
+    <h2 class="mb-3">Candidatos Registrados</h2>
+    <div class="table-responsive">
+      <table class="table table-striped table-bordered align-middle" id="tabla-candidatos">
+        <thead class="table-dark">
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Apellido</th>
+            <th>Cédula</th>
+            <th>RH</th>
+            <th>Ciudad</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    
+
+  <footer>
+    <p>&copy; 2025 Sistema de Gestión de Talento</p>
+  </footer>
+</body>
+</html>

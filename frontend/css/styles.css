@@ -1,0 +1,27 @@
+body {
+    background-color: #f8f9fa;
+  }
+  
+  .container {
+    max-width: 900px;
+  }
+  
+  h1, h2 {
+    text-align: center;
+  }
+  
+  .form-control::placeholder {
+    color: #adb5bd;
+  }
+  
+  .list-group-item {
+    font-weight: 500;
+  }
+  
+  footer {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #6c757d;
+  }
+  
